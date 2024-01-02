@@ -142,6 +142,7 @@ class MyWindow(QWidget):
         self.list_widget.clear()
         print("[+] Cleared successfully!")
 
+    # still need to fix
     def change_order(self):
         selected_items = self.list_widget.selectedItems()
 
@@ -156,6 +157,9 @@ class MyWindow(QWidget):
                 self.file_name_lst.insert(self.pdf_order, self.file_name_lst.pop(index))
                 self.pdf_order += 1
                 self.list_widget.insertItem(self.pdf_order, item)
+
+        for item in self.file_name_lst:
+            print(item)
 
         print("[+] Selected item(s) order changed successfully.")
 
